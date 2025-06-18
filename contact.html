@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us - Vīsitō</title>
+  <link rel="stylesheet" href="./Stylesheet/contact.css">
+</head>
+<body>
+  
+    <!-- Navbar Section -->
+    <header class="navbar">
+        <div class="navbar-brand">Vīsitō</div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="navbar-links">
+            <a href="./index.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Collections ▾</a>
+                <div class="dropdown-menu">
+                    <a href="./men.html">Men</a>
+                    <a href="./women.html">Women</a>
+                    <a href="./accessories.html">Accessories</a>
+                </div>
+            </div>
+            <a href="./community.html" >Community</a>
+            <a href="./contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+
+  
+  <!-- Contact Header -->
+  <header class="contact-hero">
+    <h1>Get in Touch with Vīsitō</h1>
+    <p>Our dedicated team is here to assist you with any inquiries, ensuring a seamless experience with our premium fashion collections.</p>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Our Team</h2>
+    <p class="section-subtitle">Whether you have questions about your order, need product support, or wish to explore partnership opportunities, we’re here to help. Complete the form below, and we’ll respond promptly.</p>
+    <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+      <div class="form-group">
+        <label for="mobile">Mobile Number <span class="required">*</span></label>
+        <input type="tel" id="mobile" name="mobile" required pattern="\+?[0-9]{10,15}" placeholder="e.g., +2341234567890">
+      </div>
+      <div class="form-group">
+        <label for="query-type">Query Type <span class="required"></span></label>
+        <select id="query-type" name="query-type" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Order Inquiry">Order Inquiry</option>
+          <option value="Product Support">Product Support</option>
+          <option value="Returns and Refunds">Returns and Refunds</option>
+          <option value="Partnership Request">Partnership Request</option>
+          <option value="General Feedback">General Feedback</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" name="message" required placeholder="Please provide details about your query" rows="6"></textarea>
+      </div>
+      <button type="submit" class="submit-button">
+        <i class="fas fa-paper-plane"></i> Submit Message
+      </button>
+      <p id="form-message" class="form-message"></p>
+    </form>
+  </section>
+
+  <!-- Company Info Section -->
+  <section class="company-info">
+    <h3>Connect with Vīsitō</h3>
+    <p>At Vīsitō, we craft premium fashion that empowers individuality. Our commitment to quality and customer satisfaction drives everything we do.</p>
+    <ul class="contact-details">
+      <li><i class="fas fa-envelope"></i> <a href="mailto:support@visito.com">support@visito.com</a></li>
+      <li><i class="fas fa-phone"></i> <a href="tel:+2340708454439">+234 07084544389</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Avenue, Lagos, Nigeria</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Vīsitō. All rights reserved.</p>
+  </footer>
+
+  <!-- Mode Toggle -->
+  <button class="mode-toggle" id="modeToggle" aria-label="Toggle theme">🌙</button>
+
+
+
+
+  <script src="./Javascript/contact.js"></script>
+</body>
+</html>

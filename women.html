@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Women's Collection - Vīsitō</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="./Stylesheet/women.css">
+</head>
+<body>
+  
+<!-- Navbar Section -->
+  <header class="navbar">
+    <a href="./index.html" class="navbar-brand">
+      <div class="navbar-brand"> Vīsitō </div>
+    </a>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="navbar-links">
+      <a href="./index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Collections ▾</a>
+        <div class="dropdown-menu">
+          <a href="./men.html">Men</a>
+          <a href="./women.html" class="active">Women</a>
+          <a href="./accessories.html">Accessories</a>
+        </div>
+      </div>
+      <a href="./community.html">Community</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <div class="cart-icon" id="cartIcon" data-count="0">🛒</div>
+  </header>
+
+  <!-- Header Info -->
+  <div class="main-header">
+    <div class="header-title">Women’s Collection</div>
+    <!-- <div class="cart-icon-container">
+      🛒 Cart <span id="cartCount">0</span>
+    </div> -->
+  </div>
+
+  <!-- Mode Toggle -->
+  <div class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">🌙</div>
+
+  <!-- Product Grid -->
+  <section class="product-grid" id="productGrid"></section>
+
+   <!-- Enhanced Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <span class="image-modal-close" onclick="closeImageModal()">×</span>
+    <div class="image-modal-container">
+      <img class="image-modal-content" id="modalImage" alt="Product Image">
+    </div>
+    <div class="zoom-controls">
+      <button class="zoom-btn" onclick="zoomImage(1.2)">+</button>
+      <button class="zoom-btn" onclick="zoomImage(0.8)">-</button>
+      <button class="zoom-btn" onclick="resetZoom()">Reset</button>
+    </div>
+  </div>
+
+  <div id="cartModal" class="modal" style="display: none;">
+  <div id="cartItems"></div>
+  <p>Total: ₦<span id="cartTotal">0</span></p>
+  <button id="closeCart" class="cart-btn close-btn">Close</button>
+  <button id="checkout" class="cart-btn">Order via WhatsApp</button>
+</div>
+
+  <!-- WhatsApp Checkout -->
+  <div style="text-align: center; margin: 30px;">
+    <button class="cart-btn whatsapp-btn" onclick="sendToWhatsApp()">Shop 🛒</button>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+
+      <!-- Brand -->
+      <div class="footer-brand" data-animate>
+        <img src="./Asset/Hompage/Image_fx__4.png" alt="Visitō Logo" class="footer-logo" />
+        <p class="footer-tagline">Elevate Your Style, Define Your Legacy.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links" data-animate>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter" data-animate>
+        <h4>Stay in the Loop</h4>
+        <p>Sign up for our newsletter to get the latest drops & offers.</p>
+        <form class="newsletter-form" action="https://formspree.io/f/mjkgkqdd" method="POST">
+          <input type="email" name="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+     <!-- Collaboration -->
+    <div class="footer-collaboration" data-animate>
+      <h4>Collaboration</h4>
+      <p>We’re proud to partner with</p>
+      <span class="collab-name">DREAM</span>
+      <p class="collab-expansion">
+        <span class="letter">D</span> – Delivering<br>
+        <span class="letter">R</span> – Remarkable<br>
+        <span class="letter">E</span> – Expertise<br>
+        <span class="letter">A</span> – Advanced<br>
+        <span class="letter">M</span> – Management
+      </p>
+    </div>
+
+   <!-- Social -->
+<div class="footer-social" data-animate>
+  <h4>Follow Us</h4>
+  <div class="social-icons">
+    <!-- Facebook -->
+    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.13V12h2.13V9.77c0-2.1 1.25-3.27 3.17-3.27.92 0 1.87.16 1.87.16v2.06h-1.06c-1.04 0-1.36.64-1.36 1.3V12h2.32l-.37 2.88h-1.95v6.99A10 10 0 0022 12z"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/07084544389" target="_blank" aria-label="WhatsApp">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149-.198.297-.768.967-.942 1.165-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.075-.149-.672-1.611-.921-2.206-.243-.579-.49-.5-.672-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.26.489 1.689.626.71.226 1.358.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.414-.075-.124-.273-.198-.57-.347z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/henry357161/" target="_blank" aria-label="Instagram">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.404.6.21 1.03.46 1.48.91.45.45.7.88.91 1.48.163.46.348 1.26.404 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.404 2.43a4.19 4.19 0 01-.91 1.48 4.19 4.19 0 01-1.48.91c-.46.163-1.26.348-2.43.404-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.404a4.19 4.19 0 01-1.48-.91 4.19 4.19 0 01-.91-1.48c-.163-.46-.348-1.26-.404-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.404-2.43a4.19 4.19 0 01.91-1.48 4.19 4.19 0 011.48-.91c.46-.163 1.26-.348 2.43-.404C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.74 0 8.332.012 7.052.07 5.766.128 4.762.318 3.932.605a6.3 6.3 0 00-2.29 1.51A6.3 6.3 0 00.604 4.406c-.287.83-.477 1.834-.535 3.12C.012 8.668 0 9.076 0 12s.012 3.332.07 4.612c.058 1.286.248 2.29.535 3.12a6.3 6.3 0 001.51 2.29 6.3 6.3 0 002.29 1.51c.83.287 1.834.477 3.12.535 1.28.058 1.688.07 4.612.07s3.332-.012 4.612-.07c1.286-.058 2.29-.248 3.12-.535a6.3 6.3 0 002.29-1.51 6.3 6.3 0 001.51-2.29c.287-.83.477-1.834.535-3.12.058-1.28.07-1.688.07-4.612s-.012-3.332-.07-4.612c-.058-1.286-.248-2.29-.535-3.12a6.3 6.3 0 00-1.51-2.29A6.3 6.3 0 0020.068.605C19.238.318 18.234.128 16.948.07 15.668.012 15.26 0 12 0zM12 5.838A6.162 6.162 0 1018.162 12 6.17 6.17 0 0012 5.838zm0 10.162A4 4 0 1116 12a4.005 4.005 0 01-4 4zm6.406-11.844a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"/>
+      </svg>
+    </a>
+
+    <!-- Twitter -->
+    <a href="https://x.com/H85033898Henry" target="_blank" aria-label="Twitter">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.27 4.27 0 001.88-2.35 8.58 8.58 0 01-2.72 1.04 4.26 4.26 0 00-7.27 3.88A12.08 12.08 0 013 4.84a4.26 4.26 0 001.32 5.68A4.24 4.24 0 012.8 10v.05a4.26 4.26 0 003.42 4.17 4.28 4.28 0 01-1.92.07 4.26 4.26 0 003.98 2.96A8.54 8.54 0 012 19.54a12.06 12.06 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.38-.01-.57A8.7 8.7 0 0024 5.5a8.51 8.51 0 01-2.54.7z"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+    </div>
+
+   
+  <div class="footer-bottom">
+    <p>&copy; 2025 Your Brand. All rights reserved.</p>
+  </div>
+  </footer>
+
+
+
+  <script src="./Javascript/women.js"></script>
+</body>
+</html>
