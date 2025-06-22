@@ -8,29 +8,32 @@
 </head>
 <body>
 
-  <!-- Navbar Section -->
-    <header class="navbar">
-        <div class="navbar-brand">Vīsitō</div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-         <nav class="navbar-links">
-        <a href="./index.html" class="active">Home</a>
-        <div class="dropdown">
-            <a href="javascript:void(0)" class="dropdown-toggle">Collections ▾</a>
-            <div class="dropdown-menu">
-                <a href="./men.html">Men</a>
-                <a href="./women.html">Women</a>
-                <a href="./accessories.html">Accessories</a>
-            </div>
-        </div>
-        <a href="./community.html">Community</a>
-        <a href="./contact.html">Contact</a>
-    </nav>
-    </header>
+<!-- Navbar Section -->
+<header class="navbar">
+  <div class="navbar-brand">Vīsitō</div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <span></span><span></span><span></span>
+  </label>
+
+  <nav class="nav-links">
+    <a href="./index.html">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">Collections ▾</button>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="./men.html">Men</a>
+        <a href="./women.html">Women</a>
+        <a href="./accessories.html">Accessories</a>
+      </div>
+    </div>
+
+    <a href="./community.html">Community</a>
+    <a href="./contact.html">Contact</a>
+    
+  </nav>
+</header>
 
 
 <section class="hero">

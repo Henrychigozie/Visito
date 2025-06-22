@@ -152,3 +152,61 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      const dropdown = toggle.parentElement; // Get the .dropdown div
+      dropdown.classList.toggle('active'); // Toggle dropdown visibility
+    });
+  });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const dropdown = document.querySelector('.dropdown');
+      if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
+        dropdown.classList.remove('active');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Debug clicks
+    document.querySelectorAll('.navbar-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        console.log('Link clicked:', link.href);
+      });
+    });
+  });
+
+
+const toggleBtn = document.getElementById('mode-toggle');
+const body = document.body;
+
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light');
+}
+
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('light');
+  localStorage.setItem('theme', body.classList.contains('light') ? 'light' : 'dark');
+});
+
+// Dropdown menu toggle
+function toggleDropdown() {
+  const dropdown = document.getElementById('dropdownMenu');
+  dropdown.classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function (e) {
+  const dropdown = document.getElementById('dropdownMenu');
+  const button = document.querySelector('.dropbtn');
+  if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+    dropdown.classList.remove('show');
+  }
+});
+
+

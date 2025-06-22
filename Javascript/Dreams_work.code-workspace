@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../payment"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Dreams_work"
+	}
+}

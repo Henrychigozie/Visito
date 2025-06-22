@@ -7,7 +7,7 @@
       { id: 6, name: "Accep Jacket - US 8 _ Neutral _ Burlap", price: 25500, material: "Genuine Leather", image: "https://i.postimg.cc/VvJpzP9w/Accep-Jacket-US-8-Neutral-Burlap.jpg" },
       { id: 7, name: "Achock Basic AC Logo Print Tee - XXL _ lightcoral", price: 10000, material: "Polyester", image: "https://i.postimg.cc/TP7qcLmd/female-10.jpg" },
       { id: 8, name: "Balmain Halterneck Top", price: 10500, material: "Wool", image: "https://i.postimg.cc/59p20Bwk/Balmain-Halterneck-Top-38.jpg" },
-      { id: 9, name: "Vetements Destroyed Baggy Denim Jeans - Light Blue", price: 18000, material: "Cotton", image: "https://i.postimg.cc/KcLB1s9v/female-35.jpg" },
+      { id: 9, name: "Vetements Destroyed Baggy Denim Jeans - Light Blue", price: 18000, material: "Cotton", image: "https://i.postimg.cc/4NFq8vr4/female-35.jpg" },
       { id: 10, name: "Bolt Cardigan Sweater - Black_White_Grey", price: 28000, material: "Twill", image: "https://i.postimg.cc/K8p9vHzv/Bolt-Cardigan-Sweater-3-X-Black-White-Grey.jpg" },
       { id: 11, name: "Chic Summer Knit Hollow Out Sleeveless Tank Top - Gray _ M", price: 10500, material: "Cashmere Blend", image: "https://i.postimg.cc/cCNK70D1/female-13.jpg" },
       { id: 12, name: "Color Block Knitted Tight-fitting T-shirt With Contrast Collar", price: 15000, material: "Suede", image: "https://i.postimg.cc/wTmxkSCn/Color-Block-Knitted-Tight-fitting-T-shirt-With-Contrast-Collar.jpg" },
