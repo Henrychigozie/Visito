@@ -361,3 +361,15 @@ window.addEventListener('DOMContentLoaded', () => {
         (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       document.documentElement.setAttribute("data-theme", savedTheme);
     })();
+
+    function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+  }
+
+  window.addEventListener("click", function (e) {
+    if (!e.target.matches(".dropbtn")) {
+      document.querySelectorAll(".dropdown-content").forEach(menu => {
+        menu.classList.remove("show");
+      });
+    }
+  });

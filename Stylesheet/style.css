@@ -1342,11 +1342,7 @@ html, body {
   }
 }
 
-        .navbar-links a.active {
-  color: var(--gold);
-  font-weight: bold;
-  border-bottom: 2px solid var(--gold);
-}
+
 
 
 
@@ -1417,11 +1413,7 @@ html, body {
   width: 100%;
 }
 
-.navbar-links a.active {
-  color: var(--gold);
-  font-weight: bold;
-  border-bottom: 2px solid var(--gold);
-}
+
 
 .dropdown {
   position: relative;
@@ -1632,7 +1624,7 @@ body {
 
 .dropdown-content a:hover {
   background-color:   #ffd700;
-  color: var(--hover);
+  color: #eee;
   /* color: #b8860b; */
 }
 
@@ -1723,7 +1715,53 @@ body {
   }
 }
 
+:root {
+ 
+  --hover: #FFD700;
+}
 
+body.dark {
+  --link: white;
+}
 
+.nav-link {
+  position: relative;
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--hover);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--hover);
+  font-weight: bold;
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--hover);
+  border-radius: 50%;
+}
 

@@ -341,3 +341,17 @@ window.addEventListener('DOMContentLoaded', () => {
       renderProducts();
       if (cartIcon) cartIcon.addEventListener("click", showCartSummary);
     });
+
+
+    
+    function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+  }
+
+  window.addEventListener("click", function (e) {
+    if (!e.target.matches(".dropbtn")) {
+      document.querySelectorAll(".dropdown-content").forEach(menu => {
+        menu.classList.remove("show");
+      });
+    }
+  });

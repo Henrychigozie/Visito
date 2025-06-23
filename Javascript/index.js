@@ -194,19 +194,24 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('theme', body.classList.contains('light') ? 'light' : 'dark');
 });
 
-// Dropdown menu toggle
 function toggleDropdown() {
-  const dropdown = document.getElementById('dropdownMenu');
-  dropdown.classList.toggle('show');
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function (e) {
-  const dropdown = document.getElementById('dropdownMenu');
-  const button = document.querySelector('.dropbtn');
-  if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-    dropdown.classList.remove('show');
+    document.getElementById("dropdownMenu").classList.toggle("show");
   }
-});
 
+  window.addEventListener("click", function (e) {
+    if (!e.target.matches(".dropbtn")) {
+      document.querySelectorAll(".dropdown-content").forEach(menu => {
+        menu.classList.remove("show");
+      });
+    }
+  });
 
+ const links = document.querySelectorAll('.nav-link');
+  const currentPath = window.location.pathname.split('/').pop() || "index.html";
+
+  links.forEach(link => {
+    const linkPath = link.getAttribute('href').split('/').pop();
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+  });
