@@ -50,7 +50,7 @@ html, body {
 
 
 /* ==================== Navbar Section ==================== */
-        .navbar {
+        /* .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -62,7 +62,7 @@ html, body {
             left: 0;
             right: 0;
             z-index: 9999;
-        }
+        } */
 
    /* 1️⃣ Entrance Fade & Slide */
 @keyframes brandEntrance {
@@ -1722,6 +1722,8 @@ body {
     align-self: flex-start;
   }
 }
+
+
 
 
 

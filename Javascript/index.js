@@ -52,22 +52,22 @@
   });
 
   // WhatsApp shop buttons (no price)
-  const shopButtons = document.querySelectorAll('.shop-button');
+  // const shopButtons = document.querySelectorAll('.shop-button');
 
-  shopButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const productName = button.dataset.name;
-      const productImage = button.dataset.image;
-      const phoneNumber = '23407084544389';
+  // shopButtons.forEach(button => {
+  //   button.addEventListener('click', () => {
+  //     const productName = button.dataset.name;
+  //     const productImage = button.dataset.image;
+  //     const phoneNumber = '23407084544389';
 
-      const message =
-        `Hello! I'm interested in:\n\n` +
-        `*Product:* ${productName}\n` +
-        `*Image:* ${productImage}`;
+  //     const message =
+  //       `Hello! I'm interested in:\n\n` +
+  //       `*Product:* ${productName}\n` +
+  //       `*Image:* ${productImage}`;
 
-      openWhatsAppMessage(phoneNumber, message);
-    });
-  });
+  //     openWhatsAppMessage(phoneNumber, message);
+  //   });
+  // });
 
 
   const scrollContainer = document.getElementById('instagram-carousel');
