@@ -148,7 +148,7 @@ const products = [
                     <td>${cart[id]}</td>
                     <td>₦${(product.price * cart[id]).toLocaleString()}</td>
                     <td>
-                      <button class="remove-one" data-id="${id}">Remove One</button>
+                      <button class="remove-one" data-id="${id}">Reduce</button>
                       <button class="cancel-item" data-id="${id}">Cancel</button>
                     </td>
                   </tr>

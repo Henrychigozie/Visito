@@ -1,17 +1,26 @@
 /* Theme Variables */
 :root {
-  --bg: #fff;
+  --bg-light: #fff;
+  --bg-dark: #111;
+  --text-light: #111;
+  --text-dark: #eee;
+  --gold: #FFD700;
+  --black: #000;
+  --header-bg: var(--bg-light);
+  --header-text: var(--text-light);
+   --bg: #fff;
   --text: #111;
   --gold: #FFD700;
   --black: #000;
   --link: #000; 
 }
 
-
-
-
 [data-theme="dark"] {
-  --bg: #111;
+  --header-bg: var(--bg-dark);
+  --header-text: var(--text-dark);
+  /* --bg: #000; */
+  --text: #fff;
+    --bg: #111;
   --text: #eee;
     --link: white;  
 }
@@ -1349,7 +1358,7 @@ html, body {
 
 
 
-/* Navbar Section */
+   /* Navbar Section */
 
 
 @keyframes brandEntrance {
@@ -1605,7 +1614,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--dropdown-bg);
+  background-color: var(--bg);
   min-width: 160px;
   border: 1px solid var(--text);
   opacity: 0;
@@ -1623,7 +1632,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color:   #ffd700;
+  background-color:   #ffd000;
   color: #eee;
   /* color: #b8860b; */
 }
@@ -1717,7 +1726,7 @@ body {
 
 :root {
  
-  --hover: #FFD700;
+  --hover: #f5c013;
 }
 
 body.dark {
@@ -1764,4 +1773,3 @@ body.dark {
   background-color: var(--hover);
   border-radius: 50%;
 }
-

@@ -2,7 +2,7 @@
       { id: 1, name: "Cider Top-Raglan Long Sleeve", price: 10000, material: "Cotton", image: "https://i.postimg.cc/CKtbWyKk/1b58e5f2-74df-45a9-8bb1-9ba2ca7f55a3.jpg" },
       { id: 2, name: "Floral Knitted Sweaters-Olive Green", price: 12000, material: "Fleece", image: "https://i.postimg.cc/fTZY4fM2/4a38cb97-6cbe-41ed-9c2e-ef1f5ea287f5.jpg" },
       { id: 3, name: "Bodysuit-White", price: 8000, material: "Linen", image: "https://i.postimg.cc/GhC3qMb2/268a2ce8-8c83-4529-bec7-fce8d5b30ab9.jpg" },
-      { id: 4, name: "Women Autumn Winter Denim Coat Lapel Long Sleeve Short Jackets", price: 15000, material: "Denim", image: "https://i.postimg.cc/ZKd3ysV5/female-5.jpg" },
+      { id: 4, name: "Women Autumn Winter Denim Coat ", price: 15000, material: "Denim", image: "https://i.postimg.cc/ZKd3ysV5/female-5.jpg" },
       { id: 5, name: "Acadia Waves Trail High Pile Fleece", price: 30000, material: "Cotton Blend", image: "https://i.postimg.cc/cJX8Np4X/female-8.jpg" },
       { id: 6, name: "Accep Jacket - US 8 _ Neutral _ Burlap", price: 25500, material: "Genuine Leather", image: "https://i.postimg.cc/VvJpzP9w/Accep-Jacket-US-8-Neutral-Burlap.jpg" },
       { id: 7, name: "Achock Basic AC Logo Print Tee - XXL _ lightcoral", price: 10000, material: "Polyester", image: "https://i.postimg.cc/TP7qcLmd/female-10.jpg" },
@@ -134,7 +134,7 @@
                     <td>${cart[id]}</td>
                     <td>₦${(product.price * cart[id]).toLocaleString()}</td>
                     <td>
-                      <button class="remove-one" data-id="${id}">Remove One</button>
+                      <button class="remove-one" data-id="${id}">Remove</button>
                       <button class="cancel-item" data-id="${id}">Cancel</button>
                     </td>
                   </tr>
