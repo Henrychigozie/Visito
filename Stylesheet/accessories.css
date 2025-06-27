@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 :root {
   --bg-light: #fff;
   --bg-dark: #111;
@@ -30,7 +29,6 @@
   --text: #eee;
     --link: white;  
 }
-
 
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -456,99 +454,7 @@ body {
   text-align: center;
 }
 
-/* Cart Summary Modal */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 10000;
-  max-width: 600px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  animation: fadeIn 0.3s ease-out;
-}
-
-[data-theme="dark"] .modal {
-  background: #222;
-  color: #fff;
-}
-
-.modal h2 {
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
-  margin-bottom: 15px;
-  text-align: center;
-  border-bottom: 2px solid var(--gold);
-  padding-bottom: 10px;
-}
-
-.modal table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.modal th, .modal td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-[data-theme="dark"] .modal th, [data-theme="dark"] .modal td {
-  border-bottom: 1px solid #444;
-}
-
-.modal th {
-  font-weight: bold;
-  background: var(--black);
-  color: var(--gold);
-}
-
-.modal img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.modal .total {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: right;
-  margin-top: 10px;
-}
-
-.modal button {
-  background: var(--black);
-  color: var(--gold);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  margin: 0 5px;
-}
-
-.modal button:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.modal .close-btn {
-  display: block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-}
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -623,6 +529,15 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
 
 
   /* ==================== Footer Styles ==================== */
@@ -903,9 +818,7 @@ body {
     }
 
 
-
     
- 
     /* Navbar Section */
 
 
@@ -1321,3 +1234,230 @@ body.dark {
   background-color: var(--hover);
   border-radius: 50%;
 } */
+
+
+
+
+:root {
+  --black: #000;
+  --gold: #FFD700;
+}
+
+/* Prevent background scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Modal animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 10000;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+}
+
+[data-theme="dark"] .modal {
+  background: #222;
+  color: #fff;
+}
+
+.modal h2 {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 10px;
+}
+
+/* Scrollable Cart Items Only */
+#cartItems {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Optional scrollbar styling */
+#cartItems::-webkit-scrollbar {
+  width: 6px;
+}
+#cartItems::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+
+/* Table styles */
+.modal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.modal th, .modal td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+[data-theme="dark"] .modal th, [data-theme="dark"] .modal td {
+  border-bottom: 1px solid #444;
+  
+}
+.modal th {
+  font-weight: bold;
+  background: var(--black);
+  color: var(--gold);
+}
+
+.modal td button {
+  background: var(--black);
+  color: var(--gold);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-top: 10px;
+}
+
+.modal td button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.modal img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.modal .total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* Button container */
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Cart buttons */
+.cart-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--black);
+  color: var(--gold);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.cart-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: var(--gold);
+  color: var(--black);
+}
+.whatsapp-btn:hover {
+  background: #e5c100;
+}
+
+/* Close Button */
+.close-btn {
+  background: crimson;
+  color: white;
+}
+
+/* Cart Quantity Controls */
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.cart-controls button {
+  background: var(--black);
+  color: var(--gold);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  transition: background 0.3s, color 0.3s;
+}
+.cart-controls button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.cart-controls span {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-buttons {
+    flex-direction: column;
+  }
+
+  .modal img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-btn {
+    font-size: 0.95rem;
+  }
+
+  #cartItems {
+    font-size: 0.9rem;
+  }
+
+  .modal .total {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    min-height: 320px;
+  }
+}
+
+
