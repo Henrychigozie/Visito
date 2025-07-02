@@ -1460,4 +1460,7 @@ body.modal-open {
   }
 }
 
+.navbar a{
+  text-decoration: none;
+}
 

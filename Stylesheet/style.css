@@ -1773,3 +1773,7 @@ body.dark {
   background-color: var(--hover);
   border-radius: 50%;
 }
+
+.navbar a{
+  text-decoration: none;
+}
