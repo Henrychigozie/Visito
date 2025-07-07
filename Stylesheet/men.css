@@ -1460,7 +1460,14 @@ body.modal-open {
   }
 }
 
-
 .navbar a{
   text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .product-card img {
+    height: auto; /* Remove fixed height */
+    max-height: 100%; /* Allow image to scale naturally */
+  }
 }
