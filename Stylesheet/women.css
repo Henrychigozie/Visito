@@ -1266,10 +1266,12 @@ body.modal-open {
   z-index: 10000;
   max-width: 600px;
   width: 90%;
-  max-height: 80vh;
-  overflow: hidden;
+  max-height: 100vh;
+  /* overflow: hidden; */
+  overflow-y: scroll;
   animation: fadeIn 0.3s ease-out;
 }
+
 
 [data-theme="dark"] .modal {
   background: #222;

@@ -1223,20 +1223,6 @@ body.dark {
   font-weight: bold;
 }
 
-/* .nav-link.active::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  background-color: var(--hover);
-  border-radius: 50%;
-} */
-
-
-
 
 :root {
   --black: #000;
@@ -1266,10 +1252,12 @@ body.modal-open {
   z-index: 10000;
   max-width: 600px;
   width: 90%;
-  max-height: 80vh;
-  overflow: hidden;
+  max-height: 100vh;
+  /* overflow: hidden; */
+  overflow-y: scroll;
   animation: fadeIn 0.3s ease-out;
 }
+
 
 [data-theme="dark"] .modal {
   background: #222;
