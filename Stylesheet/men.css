@@ -1353,7 +1353,7 @@ body.modal-open {
 .modal .total {
   font-size: 1.2rem;
   font-weight: bold;
-  text-align: right;
+  text-align: center;
   margin-top: 10px;
 }
 

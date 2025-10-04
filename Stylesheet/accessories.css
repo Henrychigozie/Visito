@@ -1246,18 +1246,18 @@ body.modal-open {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
-  padding: 10px;
+  padding:30px 0px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 10000;
-  max-width: 600px;
-  width: 90%;
+  max-width: 700px;
+  width: 100%;
   max-height: 100vh;
   /* overflow: hidden; */
   overflow-y: scroll;
+  overflow-x: hidden;
   animation: fadeIn 0.3s ease-out;
 }
-
 
 [data-theme="dark"] .modal {
   background: #222;
@@ -1337,7 +1337,7 @@ body.modal-open {
 .modal .total {
   font-size: 1.2rem;
   font-weight: bold;
-  text-align: right;
+  text-align: center;
   margin-top: 10px;
 }
 
